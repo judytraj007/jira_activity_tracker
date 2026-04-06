@@ -1,12 +1,14 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from app.routes import bp
 
-def create_app():
-    app = Flask(__name__)
-    app.register_blueprint(bp)
-    return app
+app = Flask(__name__, static_folder="frontend", static_url_path="")
+app.register_blueprint(bp)
 
-app = create_app()
+
+@app.route("/")
+def index():
+    return send_from_directory("frontend", "index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
