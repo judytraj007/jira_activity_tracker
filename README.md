@@ -16,33 +16,6 @@ A simple AI-powered chatbot that integrates with JIRA and GitHub to answer quest
   - GitHub pull requests
 
 
-## Project Structure
-
-.
-├── app/
-│   ├── routes.py
-│   ├── core/
-│   │   └── config.py
-│   ├── services/
-│   │   ├── jira_client.py
-│   │   ├── github_client.py
-│   │   └── llm_parser.py
-│   ├── models/
-│   │   └── query.py
-│   └── utils/
-│       └── response_builder.py
-│
-├── frontend/
-│   ├── index.html
-│   ├── script.js
-│
-├── tests/
-├── run.py
-├── requirements.txt
-├── .env
-└── README.md
-
-
 ## Setup Instructions
 
 ### 1. Clone the repository
