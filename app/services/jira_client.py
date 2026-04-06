@@ -9,7 +9,7 @@ def get_user_issues(user_email: str):
     url = f"{Config.JIRA_BASE_URL}/rest/api/3/search"
 
     params = {
-        "jql": f"assignee={user_email} ORDER BY updated DESC",
+        "jql": f"assignee={user_email} AND updated >= -7d ORDER BY updated DESC",
         "maxResults": 5
     }
 
